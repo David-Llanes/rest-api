@@ -1,0 +1,35 @@
+### Recuperar todas las peliculas
+GET http://localhost:3000/movies
+
+### Recuperar una pelicula por ID
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar las peliculas de un genero especifico
+GET http://localhost:3000/movies?genre=Action
+
+### Recuperar las peliculas que contengan el titulo
+GET http://localhost:3000/movies?title=The+Avengers
+
+### Crear una pelicula
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "sql": "ESTE LO VA A IGNORAR GRACIAS A ZOD :D",
+  "title": "Divergente",
+  "year": 2014,
+  "director": "Neil Burger",
+  "duration": 139,
+  "poster": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTTua3TEtNon5iV14kCsaSxOp-vBvftCefuA4HYg2s40_EAzkDD",
+  "genre": ["Action", "Adventure", "Sci-Fi"],
+  "rate": 7.0
+}
+
+### Actualizar un recurso
+PATCH http://localhost:3000/movies/04986507-b3ed-442c-8ae7-4c5df804f827
+Content-Type: application/json
+
+{
+  "id": "LA VA A IGNORAR PORQUE NO EXISTE EN EL ESQUEMA",
+  "year": 2013
+}
